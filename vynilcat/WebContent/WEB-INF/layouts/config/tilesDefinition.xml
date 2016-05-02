@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	
+	<definition name="base" template="/WEB-INF/layouts/base/baseLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/layouts/base/headerLayout.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/layouts/base/footerLayout.jsp"/>
+	</definition>
+
+	<definition name="baseAdmin" template="/WEB-INF/layouts/base/adminBaseLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/layouts/base/headerLayout.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/layouts/base/footerLayout.jsp"/>
+	</definition>
+		
+	<definition name="browse" extends="base">
+		<put-attribute name="content" value="/WEB-INF/layouts/browse.jsp" />	
+	</definition>
+	
+	<definition name="login" extends="base">
+		<put-attribute name="content" value="/WEB-INF/layouts/login.jsp" />	
+	</definition>
+
+	<definition name="locked" extends="base">
+		<put-attribute name="content" value="/WEB-INF/layouts/locked.jsp" />	
+	</definition>
+	
+	<definition name="error404" extends="base">
+		<put-attribute name="content" value="/WEB-INF/layouts/error404.jsp" />	
+	</definition>
+
+	<definition name="register" extends="base">
+		<put-attribute name="content" value="/WEB-INF/layouts/register.jsp" />	
+	</definition>
+
+	<definition name="profile" extends="base">
+		<put-attribute name="content" value="/WEB-INF/layouts/profile.jsp" />	
+	</definition>
+
+	<definition name="upgrade" extends="base">
+		<put-attribute name="content" value="/WEB-INF/layouts/upgrade.jsp" />	
+	</definition>
+	
+	<definition name="admin" extends="baseAdmin">
+		<put-attribute name="content" value="/WEB-INF/layouts/admin.jsp" />	
+	</definition>
+
+	<definition name="contact" extends="baseAdmin">
+		<put-attribute name="content" value="/WEB-INF/layouts/contact.jsp" />	
+	</definition>
+	
+</tiles-definitions>

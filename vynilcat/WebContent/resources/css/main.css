@@ -1,0 +1,236 @@
+@CHARSET "UTF-8";
+
+html, body, #container {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	height: 100%;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+#container {
+	background-color: #121314;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: auto;
+    min-height: 100%;
+}
+
+#header{
+	background-color: black;
+	position: relative;
+	height: 80px;
+	width: 100%;
+	overflow: hidden;
+}
+
+#header div{
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    height: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    position: relative;
+    width: 30%;
+}
+
+#header .right{
+	float: right;
+	text-align: right;
+	padding-top: 32px;
+}	
+
+#header .left{
+	float: left;
+}
+
+#header .logo{
+	height: 50px;
+	width: auto;
+}
+
+#header .headerIcons{
+	height: 25px;
+	width: auto;
+}
+
+#content{
+	padding-bottom: 50px;
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+
+#content img {
+    height: 250px;
+    margin-bottom: 20px;
+    width: auto;
+}
+
+#content .loginContainers {
+	background-color: #121314;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 1em;
+    position: absolute;
+}
+
+#content .login {
+    height: 120px;
+    left: 60px;	
+    top: 60px;
+    width: 330px;
+    padding: 29px;
+    text-align: left;
+}
+
+#content .register {
+    height: 30px;
+    left: 60px;
+    top: 250px;
+    width: 330px;
+    padding: 10px 29px;
+    text-align: center;
+}
+
+#content .register input {
+    width: 120px;
+}
+
+#content .newRegister{
+    height: 260px;
+    left: 60px;
+    padding: 29px;
+    text-align: left;
+    top: 60px;
+    width: 380px;
+}
+
+footer {
+	background-color: black;
+	position: relative;
+	margin-top: -50px; 
+	height: 50px; 
+	clear: both;
+	width: 100%;
+}
+
+.style-1 input[type="text"] {
+	padding: 5px;
+	border: solid 3px #c9c9c9;
+	transition: border 0.3s;
+	border-radius: 5px;
+}
+.style-1 input[type="text"]:focus,
+	.style-1 input[type="text"].focus {
+		border: solid 3px #feb010;
+}
+
+.style-1 input[type="submit"] {
+    background-color: #feb010;
+    border: medium none;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 4px 10px;
+    padding: 5px 30px;
+}
+
+#content .contentSection{
+	border-top: 1px solid white;
+    display: inline-block;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+}
+
+#results {
+    border-top: 1px solid;
+}
+
+#results div {
+    display: inline-block;
+    position: relative;
+    width: 33%;
+}
+
+.bgsearch{
+    background-color: black;
+    background-image: url("../images/vynil.jpg");
+    background-position: 1px -320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div span.title{
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.nota {
+    color: #feb010;
+    font-size: 0.9em;
+    font-style: italic;
+    font-weight: bold;
+    width: 100% !important;
+}
+
+div.error {
+    background-color: #8d1b1e;
+    color: white;
+    font-size: 0.9em;
+    height: 200px;
+    left: 40px;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    visibility: hidden;
+    width: 250px;
+    z-index: 999;
+}
+
+div.error img {
+    height: auto !important;
+    width: 250px !important;
+}
+
+.errorInForm {
+    color: white;
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.button{
+	height: 30px !important;
+}
+
+.icon{
+	height: 40px !important;
+    margin-bottom: 0 !important;
+    padding: 0 20px;
+}
+
+#searched{
+	height: 20px;
+}
+
+.red{
+	color: red;
+}
+
+.green{
+	color: green;
+}
+
+.orange{
+	color: #d78b1f;
+}
