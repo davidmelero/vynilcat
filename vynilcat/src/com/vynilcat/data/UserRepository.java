@@ -1,9 +1,6 @@
 package com.vynilcat.data;
 
-import java.util.Collection;
 import java.util.List;
-
-import org.springframework.security.core.GrantedAuthority;
 
 import com.vynilcat.sys.Autoridad;
 import com.vynilcat.sys.ContactMessage;
@@ -13,7 +10,8 @@ import com.vynilcat.sys.Usuario;
 public interface UserRepository {
 
 	List<LoginUsuario> findAll();
-	
+
+//	@Cacheable("vynilcatCache")
 	LoginUsuario findByUsername(String username);
 	
 //	Collection<GrantedAuthority> getGrantedAuthorities(Usuario user);

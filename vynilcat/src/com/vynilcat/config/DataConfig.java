@@ -7,9 +7,13 @@ import javax.sql.DataSource;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.ehcache.EhCacheCacheManager;
+import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
@@ -17,7 +21,10 @@ import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import net.sf.ehcache.CacheManager;
 
+
+@EnableCaching
 @Configuration
 @EnableTransactionManagement
 public class DataConfig {
@@ -68,6 +75,19 @@ public class DataConfig {
 	@Bean
 	public PersistenceExceptionTranslationPostProcessor exceptionProcessor(){
 		return new PersistenceExceptionTranslationPostProcessor();
+	}
+	
+	@Bean
+	public EhCacheCacheManager ehCacheManager(CacheManager cache){
+		return new EhCacheCacheManager(cache);
+	}
+	
+	@Bean
+	public EhCacheManagerFactoryBean ehCacheManagerFactoryBean() {
+		EhCacheManagerFactoryBean mfb = new EhCacheManagerFactoryBean();
+		mfb.setConfigLocation(new ClassPathResource("com/vynilcat/config/ehCacheConfig.xml"));
+		
+		return mfb;
 	}
 	
 }
